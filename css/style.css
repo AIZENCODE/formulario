@@ -320,6 +320,11 @@ body {
     color: #fff;
     transition: all .3s;
 }
+
+.neutral{
+    font-size: .9em;
+    color: #a4a1a1;
+}
 /* fin */
 
 /* Contacto enlaces */
