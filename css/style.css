@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;800&display=swap');
+
+
+
+:root {
+
+    /* fonts */
+
+    --font-body: 'Poppins', sans-serif;
+
+
+
+    /* colors */
+
+    --primary: #49E8BF;
+    --info: #1E214E;
+    --secondary: #FAF9FE;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: red solid 1px; */
+ 
+}
+
+a,
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+
+input {
+    all: unset;
+
+}
+
+input:focus {
+    outline: 1px solid var(--primary);
+}
+
+textarea:focus {
+    outline: 1px solid var(--primary);
+}
+
+textarea {
+    all: unset;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--secondary);
+    color: var(--info);
+}
+
+/* Scroll */
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #eee;
+    border-radius: 10px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9); */
+    border-radius: 10px;
+    /* background-color: #CCCCCC; */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--primary);
+    /* background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent) */
+}
+
+/* FIN */
+
+.container {
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 24px 1em;
+    max-width: 1400px;
+
+
+}
+
+
+/* Contacto */
+
+.contacto {
+    background-image: linear-gradient(90deg, rgba(250, 249, 254, 1) 5%, rgba(0, 0, 0, 0) 100%), url(../img/img3.jpg );
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right top;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.contacto::after {
+    content: "";
+    position: absolute;
+    left: -280px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    height: 350px;
+    margin: auto 0;
+    border-radius: 50%;
+    background: var(--info);
+
+}
+
+.contacto::before {
+    content: "";
+    position: absolute;
+    top: -550px;
+    right: -400px;
+    bottom: 0;
+    width: 550px;
+    height: 550px;
+    margin: auto 0;
+    border-radius: 50%;
+    background: var(--info);
+
+}
+
+.contacto__content {
+    display: grid;
+    position: relative;
+    height: 650px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+}
+
+.contacto__texts {
+    display: grid;
+    gap: 2em;
+    z-index: 1000;
+}
+
+.contacto__title {
+    font-size: 1.5em;
+}
+
+.contacto__text {
+    display: grid;
+    gap: 1em;
+}
+
+.contacto__subtitle {
+    color: var(--primary);
+    font-size: 1em;
+}
+
+.contacto__items {
+    list-style-type: none;
+    font-weight: 500;
+    font-size: .9em;
+}
+
+.contacto__numero {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.contacto__numero--celeste {
+    color: var(--primary);
+}
+
+
+
+/* formulario */
+.contacto__formulario {
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    padding: 1.2rem 1.5em;
+    display: grid;
+    max-width: 400px;
+    gap: 1em;
+    border-radius: 30px;
+    box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.12);
+    z-index: 10000;
+}
+
+
+
+.formulario__title--celeste {
+    color: var(--primary);
+}
+
+.formulario__grupo {
+    display: grid;
+    gap: .5em;
+}
+
+.formulario__label {
+    font-size: 400;
+}
+
+.formulario__input {
+    display: block;
+    background: var(--secondary);
+    padding: 1em 1.5em;
+    border-radius: 25px;
+    font-size: .9em;
+}
+
+.formulario__cta {
+
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid var(--primary);
+    border-radius: 25px;
+    padding: .8em 1.5em;
+    font-weight: 800;
+    transition: all .3s;
+
+}
+.formulario__cta--disabled{
+    cursor: none;
+    background: #eeee;
+    outline: 1px solid #eee;
+    opacity: 0.5;
+}
+
+.formulario__cta--reset {
+
+    
+    color: #DC2626;
+    outline: 1px solid #DC2626;
+    border-radius: 25px;
+    padding: .8em 1.5em;
+    font-weight: 800;
+    transition: all .3s;
+
+}
+
+.formulario__cta:hover {
+
+
+    outline: 1px solid var(--primary);
+    background: var(--primary);
+    color: #fff;
+
+}
+.formulario__cta--disabled:hover{
+    cursor: unset;
+    background: #eeee;
+    outline: 1px solid #eee;
+    color: var(--info);
+}
+
+.formulario__cta--reset:hover {
+
+    outline: 1px solid #DC2626;
+    background: #DC2626;
+    color: #fff;
+
+}
+
+.formulario__cta:hover .formulario__icon {
+
+    color: var(--info);
+
+}
+.formulario__cta--disabled:hover .formulario__icon {
+
+    color: var(--primary);
+
+}
+.formulario__cta--reset:hover .formulario__icon--reset {
+
+    color: #ffff;
+
+}
+
+
+.formulario__icon {
+    color: var(--primary);
+    transition: all .3s;
+}
+.formulario__icon--reset{
+    color: #DC2626;
+    transition: all .3s;
+}
+
+.formulario__alert{
+    display: block;
+    padding: 0 1em 1em 1em ;
+    color: #B45454;
+    margin: 0;
+    font-size: .9em;
+    /* background: #FEEAEA; */
+}
+.alert__success{
+    display: grid;
+    place-items: center;
+    background: #49E8BF;
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: .5em 0;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all .3s;
+}
+/* fin */
+
+/* Contacto enlaces */
+.enlaces {
+    border-top: 1px solid #eee;
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.enlaces::after {
+    content: "";
+    position: absolute;
+    top: -650px;
+    right: 0;
+    left: -150px;
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    margin: auto auto;
+    border-radius: 50%;
+    background: var(--primary);
+
+}
+
+.enlaces__container {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contacto__redes {
+    display: flex;
+    gap: 1em;
+    font-size: 1.33em;
+    color: var(--primary);
+}
+
+.contacto__red {
+    display: flex;
+    border-radius: 50%;
+    background: #fff;
+    padding: .5em;
+    transition: all .3s;
+
+}
+
+.contacto__red:hover {
+
+    color: #fff;
+    background: var(--primary);
+}
+
+.contacto__enlace:hover {
+    transition: all .3s;
+}
+
+.contacto__enlace:hover {
+    color: var(--primary);
+}
+
+.contacto__menu {
+    display: flex;
+    gap: 1em;
+}
+
+/* Fin */
+
+
+
+/* FIN */
+
+/* Informacion */
+
+.informacion {
+    background: #fff;
+    padding: 1em 0;
+}
+
+.informacion__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacion__color {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+/* Fin */
+
+@media (max-width:1200px) {
+
+    /* Contacto */
+
+    .contacto {
+        background-image: unset;
+
+    }
+
+    .contacto__content {
+
+        height: unset;
+
+    }
+
+
+    /* formulario */
+    .contacto__formulario {
+        background: #fff;
+        position: relative;
+        bottom: unset;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        padding: 1.2rem 1.5em;
+        display: grid;
+        width: 100%;
+        max-width: unset;
+        gap: 1em;
+        border-radius: 30px;
+        box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.12);
+        z-index: 10000;
+    }
+
+
+    /* Fin */
+}
+
+@media (max-width:992px) {
+    /* Contacto */
+
+    .contacto::after {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 150px;
+        height: 150px;
+        margin: auto 0;
+        border-radius: 50%;
+        background: var(--info);
+
+    }
+
+    .contacto::before {
+        content: "";
+        position: absolute;
+        top: -755px;
+        right: -40px;
+        bottom: 0;
+        width: 150px;
+        height: 150px;
+        margin: auto 0;
+        border-radius: 50%;
+        background: var(--info);
+
+    }
+
+    .contacto__content {
+        display: grid;
+        position: relative;
+        gap: 2em;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    .contacto__title{
+        width: 100%;
+        text-align: center;
+    }
+    .contacto__texts {
+        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: center;
+        align-items: start;
+
+    }
+
+
+    /* formulario */
+
+
+
+
+    .formulario__title--celeste {
+        color: var(--primary);
+    }
+
+    .formulario__grupo {
+        display: grid;
+        gap: .5em;
+    }
+
+    .formulario__label {
+        font-size: 400;
+    }
+
+    .formulario__input {
+        display: block;
+        background: var(--secondary);
+        padding: 1em 1.5em;
+        border-radius: 25px;
+        font-size: 1em;
+    }
+
+
+    .formulario__cta:hover {
+
+
+        outline: 1px solid var(--primary);
+        background: var(--primary);
+        color: #fff;
+
+    }
+
+    /* fin */
+
+
+
+
+    /* FIN */
+
+
+}
+
+@media (max-width:768px) {
+
+    /* Contacto enlaces */
+ 
+
+
+    .enlaces__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .contacto__redes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+        font-size: 1.33em;
+        color: var(--primary);
+    }
+
+
+
+    .contacto__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+    .contacto__texts {
+        
+        display: grid;
+       
+        gap: 2em;
+        justify-content: center;
+        align-items: start;
+
+    }
+
+    /* Fin */
+
+
+
+    /* FIN */
+
+    /* Informacion */
+
+
+    .informacion__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .informacion__color {
+        color: var(--primary);
+        font-weight: 800;
+    }
+
+    /* Fin */
+}

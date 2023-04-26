@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/spinner.css">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/925f4b0807.js" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+
+</head>
+<body>
+    
+    <div class="contacto">
+        <div class="contacto__container container">
+            <div class="contacto__content">
+
+                <div class="contacto__texts">
+                    <h2 class="contacto__title">KlinPlanet</h2>
+                    <div class="contacto__text">
+                        <h3 class="contacto__subtitle">Office Manhattan</h3>
+
+                        <ul class="contacto__items">
+                            <li>3391 Cantebury</li>
+                            <li>New York</li>
+                            <li>10025</li>
+                        </ul>
+                    </div>
+                    <div class="contacto__text">
+                        <h3 class="contacto__subtitle">Office Manhattan</h3>
+                        <p class="contacto__numero"><span class="contacto__numero contacto__numero--celeste">+1</span>999 666 333</p>
+                        <ul class="contacto__items">
+                            <li>Monday - Friday 10:00AM - 7PM </li>
+                            <li>Saturday 10:00AM - 7PM</li>
+                            
+                        </ul>
+                    </div>
+                 
+                </div>
+
+
+              
+
+                <form action="" class="contacto__formulario" id="formulario">
+                    <h2 class="formulario__title">
+                        Book in <span class="formulario__title formulario__title--celeste">2 minuts</span>
+                    </h2>
+                    <div class="formulario__grupo">
+                        <label class="formulario__label" for=""> Name/Company</label>
+                        <input type="text" class="formulario__input" id="nombre" placeholder="John/CocaCola">
+                    </div>
+                    <!-- <span class="formulario__alert">Hubo un error</span> -->
+                    <div class="formulario__grupo">
+                        <label class="formulario__label" for=""> Telefono</label>
+                        <input type="text" class="formulario__input" id="telefono" placeholder="+951654987">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label class="formulario__label" for="" > Email</label>
+                        <input type="email" class="formulario__input" id="email" placeholder="example@example.com">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label class="formulario__label" for="" > CC</label>
+                        <input type="email" class="formulario__input" id="emailCC" placeholder="example@example.com">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label class="formulario__label" for="" > Asunto</label>
+                        <input type="text" class="formulario__input" id="asunto" placeholder="Proyectos">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label class="formulario__label" for=""> Mensaje</label>
+                        <textarea name="" id="mensaje" cols="30" class="formulario__input" rows="3">
+
+                        </textarea>
+                    </div>
+
+                    <button type="submit" class="formulario__cta formulario__cta--disabled" disabled>Enviar <i class="fa-solid fa-star formulario__icon"></i></button>
+                    <button type="reset" class="formulario__cta formulario__cta--reset">Resetear <i class="fa-solid fa-trash formulario__icon formulario__icon--reset"></i></button>
+
+                    <!-- <p class="alert__success">Envio</p> -->
+                    <div class="spinner spinner--hidden" id="spinner">
+                        <div class="sk-chase">
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                          </div>
+                    </div>
+                  
+                </form>
+              
+            </div>
+
+         
+           
+            
+
+        </div>
+    </div>
+
+    <div class="enlaces">
+        <div class="enlaces__container container">
+            <div class="contacto__redes">
+                <i class="fa-brands fa-facebook contacto__red"></i>
+                <i class="fa-brands fa-instagram contacto__red"></i>
+                <i class="fa-brands fa-twitter contacto__red"></i>
+            </div>
+    
+            <div class="contacto__menu">
+                <a href="" class="contacto__enlace">Home</a>
+                <a href="" class="contacto__enlace">Services</a>
+                <a href="" class="contacto__enlace">Customers</a>
+                <a href="" class="contacto__enlace">About</a>
+                <a href="" class="contacto__enlace">Contact</a>
+            </div>
+        </div>
+   
+
+    </div>
+
+    <div class="informacion">
+        <div class="informacion__container container">
+            <p>Copyright © KlinPlanet 2019 All rights reserved</p>
+            <p>Website by <span class="informacion__color">Seshawk</span></p>
+        </div>
+     
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
